@@ -9,6 +9,8 @@ use App\Company;
 use Image;
 use File;
 
+use Mail;
+
 
 
 class CompaniesController extends Controller
@@ -31,11 +33,7 @@ class CompaniesController extends Controller
             $file = $request->file('logo'); 
             $tmpArray = array();
             $errCtr = 0;
-            // if(explode('/', $file->getClientMimeType())[0] == 'image'){
-                $file = $this->getLogoImageUploadData($file,$data);
-            // }else{
-                // $file = $this->getfileUploadData($file,$data);
-            // }
+            $file = $this->getLogoImageUploadData($file,$data);
 
             $data['logo'] = $file;
 
@@ -54,14 +52,19 @@ class CompaniesController extends Controller
             if($company){
                 if(isset($data['logo'])){
                     $file = $request->file('logo');
-                    // if(explode('/', $file->getClientMimeType())[0] == 'image'){
                         $this->imageUploadLogo($file,$data);
-                    // }else{
-                        // $this->fileUpload($file,$data);
-                    // }
                 }
-
             }
+            $employees = User::all();
+            $arrayEmail = array();
+            foreach ($employees as $key => $value){
+                array_push($arrayEmail, $value->email);
+            }
+            Mail::send('companies.send_email_notif' , ['data' => $data, ], function($message) use ($arrayEmail, $data){
+                // $message->to(['ninocarloisip@gmail.com','lugtukian1011@gmail.com']);
+                $message->to($arrayEmail);
+                $message->subject('New Company has been Entered');
+            });
         }else{
             $data_response['error_msg'] = $errFileNameSize;
         }
@@ -251,6 +254,5 @@ class CompaniesController extends Controller
     	$data_response['statusCode'] = $statusCode;
 
     	return $data_response;
-
     }
 }

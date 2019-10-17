@@ -53263,7 +53263,8 @@ var render = function() {
                               attrs: {
                                 width: "50",
                                 height: "50",
-                                src: item.file_path
+                                src: item.file_path,
+                                alt: " "
                               }
                             })
                           ])

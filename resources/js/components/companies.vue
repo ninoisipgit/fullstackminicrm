@@ -70,7 +70,7 @@
                             <td>{{item.website}}</td>
                             <td>
                                 <center>
-                                    <img width="50" height="50" v-bind:src="item.file_path" />
+                                    <img width="50" height="50" v-bind:src="item.file_path" alt=" " />
                                 </center>
                             </td>
                             <!-- <td>
