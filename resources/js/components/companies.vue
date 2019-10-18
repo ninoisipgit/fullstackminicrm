@@ -193,7 +193,8 @@
                             alert("Successfully Saved!");
                             this.getCompany();
                         }else{
-                            alert("Failed Saved!");
+                            alert("Successfully Saved, but email notification failed");
+                            this.getCompany();
                         }
                 }).catch(function(error){
                     this.errors = error.response.data.errors;

@@ -2049,7 +2049,9 @@ __webpack_require__.r(__webpack_exports__);
 
           _this.getCompany();
         } else {
-          alert("Failed Saved!");
+          alert("Successfully Saved, but email notification failed");
+
+          _this.getCompany();
         }
       })["catch"](function (error) {
         this.errors = error.response.data.errors;
