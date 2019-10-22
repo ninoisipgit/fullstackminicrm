@@ -34,6 +34,7 @@ Vue.component('employees', require('./components/employees.vue').default);
 
 Vue.component('companies', require('./components/companies.vue').default);
 
+Vue.component('sendemail', require('./components/sendemail.vue').default);
 
 
 /**

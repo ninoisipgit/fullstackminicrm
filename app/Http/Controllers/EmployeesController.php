@@ -50,7 +50,6 @@ class EmployeesController extends Controller
             ]);
 
         }
-        dd($data);
         if($data['employee_id'] >=1){
 
             $employee = User::find($data['employee_id']);

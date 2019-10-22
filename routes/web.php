@@ -16,6 +16,10 @@ Route::get('/employees', 'EmployeesController@getEmployeesPage')->middleware('au
 Route::get('/companies', 'CompaniesController@getCompaniesPage')->middleware('auth');
 
 
+Route::get('/send_email', 'SendEmailController@getSendEmailPage')->middleware('auth');
+
+
+
 // Route::get('/', function () {
 //     return view('welcome');
 // })->middleware('auth');
@@ -38,6 +42,14 @@ Route::post('/saveCompany','CompaniesController@saveCompany');
 Route::get('/getCompanyList','CompaniesController@getCompanyList');
 
 Route::post('/delCompany','CompaniesController@delCompany');
+
+Route::post('/sendEmail','SendEmailController@sendEmail');
+
+
+
+
+
+
 
 
 

@@ -1,6 +1,5 @@
 <template>
     <div class="container">
-
         <h1>Employee</h1>
         <div class="row">
             <div class="col-md-4">
