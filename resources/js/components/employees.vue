@@ -62,6 +62,13 @@
         </a>
 
         <div>&nbsp;</div>
+
+        <div>&nbsp;</div>
+            <a :href="'/send_email'" target="_blank">
+                <button type="button" class="btn btn-info" style="float:right;">Send Email Notification</button>
+            </a>
+        <div>&nbsp;</div>
+        <br>
         <template >
             <div class="table-responsive">
                 <table id="empTable" class="row-border" style="width:100%">

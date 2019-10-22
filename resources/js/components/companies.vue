@@ -1,6 +1,7 @@
 <template>
     <div class="container">
         <h1>Company</h1>
+
         <template v-if="userType == 1">
         <div class="row">
             <div class="col-md-3">
@@ -48,6 +49,11 @@
             </a>
         </template>
         <div>&nbsp;</div>
+            <a :href="'/send_email'" target="_blank">
+                <button type="button" class="btn btn-info" style="float:right;">Send Email Notification</button>
+            </a>
+        <div>&nbsp;</div>
+        <br>
         <template >
             <div class="table-responsive">
                 <table id="empTable" class="row-border" style="width:100%">

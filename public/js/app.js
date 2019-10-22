@@ -1964,6 +1964,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['userName', 'userType'],
   data: function data() {
@@ -2098,6 +2104,13 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -53307,6 +53320,22 @@ var render = function() {
       _vm._v(" "),
       _c("div", [_vm._v(" ")]),
       _vm._v(" "),
+      _c("a", { attrs: { href: "/send_email", target: "_blank" } }, [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-info",
+            staticStyle: { float: "right" },
+            attrs: { type: "button" }
+          },
+          [_vm._v("Send Email Notification")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", [_vm._v(" ")]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
       [
         _c("div", { staticClass: "table-responsive" }, [
           _c(
@@ -53713,6 +53742,24 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", [_vm._v(" ")]),
+      _vm._v(" "),
+      _c("div", [_vm._v(" ")]),
+      _vm._v(" "),
+      _c("a", { attrs: { href: "/send_email", target: "_blank" } }, [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-info",
+            staticStyle: { float: "right" },
+            attrs: { type: "button" }
+          },
+          [_vm._v("Send Email Notification")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", [_vm._v(" ")]),
+      _vm._v(" "),
+      _c("br"),
       _vm._v(" "),
       [
         _c("div", { staticClass: "table-responsive" }, [
