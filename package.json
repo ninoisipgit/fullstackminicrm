@@ -25,6 +25,9 @@
     },
     "dependencies": {
         "datatables.net-dt": "^1.10.20",
-        "vuejs-datatable": "^2.0.0-alpha.3"
+        "vue-datetime-picker": "^0.2.1",
+        "vuejs-datatable": "^2.0.0-alpha.3",
+        "vuejs-datepicker": "^1.6.2",
+        "vuejs-datetimepicker": "^1.1.13"
     }
 }

@@ -24,7 +24,6 @@
 		</style>
 	</head>
 	<body>
- 
     <div style="page-break-inside:avoid !important;"></div>
 		<div class="container">
 			<div class="jumbotron">

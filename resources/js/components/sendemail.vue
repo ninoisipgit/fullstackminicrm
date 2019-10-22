@@ -4,6 +4,29 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
+                    <select  v-model="option_selected" class="form-control">
+                        <template v-for="value in optionList">
+                            <option v-bind:value="value.id">{{value.text}}</option>
+                        </template>
+                    </select>
+                    <span v-if="errors" style="color:red">{{errors.type}}</span>
+                </div>
+            </div>
+            <template v-if="option_selected == 2">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <!-- <input type="text" class="form-control" placeholder="Sched Date" v-model="sched_date"> -->
+                        <template>
+                            <datetime format="YYYY-MM-DD h:i:s" width="300px" name='dob' v-model="sched_date"></datetime>
+                        </template>
+                        <span v-if="errors" style="color:red">{{errors.sched_date}}</span>
+                    </div>
+                </div>
+            </template>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
                     <input type="text" class="form-control" placeholder="From Name" v-model="from_name">
                     <span v-if="errors" style="color:red">{{errors.from_name}}</span>
                 </div>
@@ -50,7 +73,9 @@
 </template>
 
 <script>
+import datetime from 'vuejs-datetimepicker';
     export default{
+        components: { datetime },
         data(){
             return {
              
@@ -60,7 +85,14 @@
                 to_email : '',
                 message : '',
 
-                errors : {}
+                errors : {},
+
+                optionList : [
+                {id: 1 , text : 'SEND EMAIL NOW'},
+                {id: 2 , text : 'SCHEDULE MY EMAIL'},
+                ],
+                option_selected : '',
+                sched_date : ''
             }
 
         },
@@ -90,11 +122,18 @@
                     to_name : this.to_name,
                     to_email : this.to_email,
                     message : this.message,
+                    type : this.option_selected,
+                    sched_date : this.sched_date
                 }
 
                 let self = this;
                 axios.post(axiosUrl, data).then(response => {
-                    alert('Email Sent');
+                    
+                    if(this.option_selected == 2){
+                        alert('Scheduled Email was set');
+                    }else{
+                        alert('Email Sent!');
+                    }
                 }).catch(error => {
                     this.errors = error.response.data.errors;
                 });

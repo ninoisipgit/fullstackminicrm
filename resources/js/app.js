@@ -8,11 +8,10 @@ require('./bootstrap');
 
 // import 'jquery-ui/ui/widgets/datepicker.js';
 
+
+
 import 'datatables.net/js/jquery.dataTables.js';
 
-
-
-// import 'jquery-ui/ui/widgets/datepicker.js';
 
 window.Vue = require('vue');
 
