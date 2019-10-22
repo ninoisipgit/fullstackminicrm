@@ -6,6 +6,15 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
+## Instructions by Niño Isip
+
+#Step 1: configure env file
+
+#Step 2: php artisan migrate
+
+#Step 3: npm run watch-poll
+
+#Step 4: you can now login as admin@admin.com password: password
 
 ## About Laravel
 
